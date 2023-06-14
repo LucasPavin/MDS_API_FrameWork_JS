@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken')
 
 
 /**
- * Fonction qui va nous permettre de nous inscrireà
+ * Fonction qui va nous permettre de nous inscrire
  * @param {express.Request} req 
  * @param {express.Response} res 
  */
@@ -25,10 +25,10 @@ exports.inscription = (req, res) => {
             hash => {
                 // En cas d'erreur on renvoie un message d'erreur
                 if(!hash) {
-                    return res.status(500).json({msg: "Server Error !"})
+                    return res.status(500).json({msg: "Erreur du serveur"})
                 }
                 delete body.password;
-                
+                // Création du User
                 new User({ ...body, password: hash})
                 .save() 
                 .then((user) => {

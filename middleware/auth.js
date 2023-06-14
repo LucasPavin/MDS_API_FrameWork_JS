@@ -19,20 +19,3 @@ passport.use(
     )
 )
 
-const authMiddleware = {};
-
-authMiddleware.authenticate = (req, res, next) => {
-  passport.authenticate("jwt", { session: false }, (error, user) => {
-    if (error || !user) {
-      return res.status(401).json({ error: "Unauthorized" });
-    }
-
-    // Stocker les informations d'authentification dans l'objet de demande
-    req.user = user;
-
-    // Poursuivre vers la prochaine étape de la chaîne de middleware
-    next();
-  })(req, res, next);
-};
-
-module.exports = authMiddleware;

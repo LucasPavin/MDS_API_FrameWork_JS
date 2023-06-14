@@ -93,7 +93,7 @@ exports.updateExpense = (req, res) => {
  */
 exports.deleteExpense = (req, res) => {
   const expenseId = req.params.id;
-
+    
   Expense.findByIdAndRemove(expenseId)
     .then((expense) => {
       if (!expense) {
