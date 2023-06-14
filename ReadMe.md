@@ -15,10 +15,17 @@ Express va venir rendre plus facile la création du serveur web, et donc égalem
 ## Installation
 
 ```npm init -y```
+
 ```npm i express```
+
 ```npm i -D nodemon```
+
 Pour lancer le serveur fait dans le terminal :
-```nodemon index.js```
+
+```
+nodemon index.js
+```
+
 Si nodemon ne se lance pas, rendez-vous dans le package.json et ajouter dans script {} :
 ```"dev": "nodemon index.js"```
 
