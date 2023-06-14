@@ -35,7 +35,10 @@ Si nodemon ne se lance pas, rendez-vous dans le package.json et ajouter dans scr
 ```
 
 Pour installer les e-mails unique :
--> npm i mongoose-unique-validator
+````
+npm i mongoose-unique-validator
+````
+
 Pour installer les JSonWebToken:
 ```
 npm i jsonwebtoken
