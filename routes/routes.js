@@ -3,9 +3,19 @@ const passport = require('passport');
 const { inscription, connexion } = require('../Controllers/ctrl');
 const { createCategory, getCategory, updateCategory, deleteCategory, getTest } = require('../Controllers/categoryCtrl');
 const { createExpense, getExpensesByCategory, getExpense, updateExpense, deleteExpense } = require('../Controllers/expenseCtrl');
+const cors = require('cors');
 
-const router = Router();
+const router = Router()
+// Ajout du CORS permettant de pouvoir autorisé l'appel de notre application REACT
+const corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200 
+};
 
+// Permet d'activer CORS sur l'ensemble des routes ci-dessous
+router.use(cors(corsOptions));
+
+// Route de connexion et d'inscription
 router.post('/inscription', inscription);
 router.post('/connexion', connexion);
 
