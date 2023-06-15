@@ -48,3 +48,8 @@ Pour installer passport :
 ```
 npm i passport passport-jwt
 ```
+
+Installation du CORS
+```
+npm i cors
+```
