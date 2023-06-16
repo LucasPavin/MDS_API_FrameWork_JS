@@ -28,7 +28,7 @@ router.use(passport.authenticate('jwt', { session: false }));
 
 // Toutes les catégories sont protégées afin de garder la discretion des données
 router.post('/categorie', createCategory);
-router.get('/categorie', getCategory);
+router.get('/categories', getCategory);
 router.put('/categorie/:id', updateCategory);
 router.delete('/categorie/:id', deleteCategory);
 

@@ -57,11 +57,3 @@ exports.deleteCategory = (req, res) => {
     })
     .catch((error) => res.status(500).json(error));
 };
-
-exports.getTest = (req, res) => {
-    const { params, user } = req;
-    console.log('getCategory called');
-    console.log(params); // Assurez-vous que ce message s'affiche dans la console
-    // Votre code de récupération des données de catégorie ici
-  };
-  
